@@ -28,3 +28,9 @@ echo "Threshold: $THRESHOLD"
 if [ "$USAGE" -gt "$THRESHOLD" ]; then
     echo "Alert: Disk usage is High"
 fi
+
+# Example Output
+> Checking disk usage for partition: /
+> Current Usage: 85
+> Threshold: 80
+> Alert: Disk usage is High
