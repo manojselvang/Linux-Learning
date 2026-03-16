@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-$$              # Fetch PID of current Shell
+echo $$              # Fetch PID of current Shell
 
 cleanup() {
   echo "deleting temp files"
@@ -11,14 +11,14 @@ cleanup() {
 }
 
 # Run cleanup when SIGTERM or SIGINT signal is received
-trap 'echo "kill signal received, cleaning up.."; cleanup; exit 1'; TERM INT
+trap 'echo "kill signal received, cleaning up.."; cleanup; exit 1' TERM INT
 
 echo "Starting long running process"
 touch /temp/temp_file.txt            # Create temp file
 
 # Simple long running task
 while true; do
-  date >> /temp/temp_file.txt        # Simulate long running task by writing timestamp into file
+  date >> /tmp/temp_file.txt        # Simulate long running task by writing timestamp into file
   echo "Task Running..."
   sleep 2
 done
