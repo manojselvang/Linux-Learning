@@ -21,3 +21,20 @@ done
 if [[ "$found" == false ]]; then
   echo "$servicename service not found" > /home/user/service_check.txt
 fi
+
+
+# Example 1:
+# Input:
+# Enter service name:
+# nginx
+#
+# Output (in /home/user/service_check.txt):
+# nginx service is available
+
+# Example 2:
+# Input:
+# Enter service name:
+# apache
+
+# Output:
+# apache service not found
